@@ -1,0 +1,2 @@
+from gym_oddoreven.envs.foo_env import oddorevenEnv
+from gym_oddoreven.envs.oddoreven_extrahard_env import oddorevenExtraHardEnv
