@@ -16,7 +16,18 @@ class OddorevenEnv(gym.Env):
    
   
   def _step(self, action):
-    if self.episodes
+    if self.episodes <=5:
+      a=[]
+      for x in range(5):
+        b=random.randint(1,5) #random numbers upto 5 for computer to generate to play with player
+        a.append(b)
+      while i<=5:
+        if a[i]=self.input:
+          b=self.input
+          reward=self.small
+          i+=1
+    else:
+      if reward>=2
     
   def _reset(self):
     
