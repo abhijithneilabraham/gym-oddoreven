@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/ML-Agents/Examples/PushBlock/Scenes/PushBlock.unity
+  isLoaded: 1
+  isActive: 1
