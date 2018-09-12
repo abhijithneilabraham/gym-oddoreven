@@ -16,7 +16,7 @@ model.add(Dense(1, activation='linear'))
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 model.fit(generate,binary_train,epochs=10,verbose=0)
 gen_test=[random.randint(1,5) for x in range(0,n)]
-ytest=[int(input("enter the binary for testing")) for y in range(0,n)]
+ytest=[int(input("enter the numbers for testing")) for y in range(0,n)]
 binary_test=[0]*n
 for i in range(0,n):
     if(gen_test[i]==ytest[i]):
