@@ -1,7 +1,7 @@
 import random
 from keras.models import Sequential
 from keras.layers import Dense,InputLayer
-n=10
+n=100
 generate=[random.randint(1,5) for x in range(0,n)] #computer generating random numbers for learning and total 100 numbers in range 1-5 is generated
 user_input=[int(input("enter a number")) for y in range(0,n)] #enter the user input
 binary_train = [0]*n
