@@ -14,7 +14,7 @@ from numpy import array
 from keras.layers import TimeDistributed
 def sequence_gen(n):
     n=5
-    generate=array([random.randint(1,5) for x in range(0,n)]) #computer generating random numbers for learning and total 100 numbers in range 1-5 is generated
+    generate=array([random.randint(1,5) for x in range(0,n)]) #computer generating random numbers for learning and total 5 sequences of numbers in range 1-5 is generated
     user_input=[int(input("enter a number")) for y in range(0,n)] #enter the user input
     binary_train = array([0]*n)
     for i in range(0,n):
@@ -28,7 +28,7 @@ model = Sequential()
 model.add(LSTM(20, input_shape=(5, 1), return_sequences=True))
 model.add(TimeDistributed(Dense(1, activation='sigmoid')))
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['acc'])
-for epoch in range(100):
+for epoch in range(100):        #this high epoch value makes the fitting more accuracte,but you have to enter the user input many times for the fitting to happen
     generate,binary_train=sequence_gen(5)
     model.fit(generate,binary_train,epochs=1,batch_size=1,verbose=2)
 gen_test,ytest=sequence_gen(5)
