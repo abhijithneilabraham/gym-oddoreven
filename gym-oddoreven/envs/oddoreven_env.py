@@ -8,7 +8,7 @@ class OddorevenEnv(gym.Env):
   def __init__(self,small=2,large=10):
     self.input[]
     self.state=0
-    self.seed=0#I am specifying the reard small as 2 and large as 10
+    self.seed=0#I am specifying the reward small as 2 and large as 10
 
   def seed(self, seed=None):
     self.np_random, seed = seeding.np_random(seed)
