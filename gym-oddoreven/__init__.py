@@ -1,7 +1,10 @@
+from gym.envs.registration import registry, register, make, spec
 
-from gym.envs.registration import register
-
+# Algorithmic
+# ----------------------------------------
 register(
     id='oddoreven-v0',
-    entry_point='gym_oddoreven.envs:oddoreven_env',
+    entry_point='gym.envs.gym_oddoreven.envs.oddoreven_env',
+    max_episode_steps=200,
+    reward_threshold=25.0,
 )
